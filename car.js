@@ -33,7 +33,7 @@ class Car
         }
         if( this.sensor )
         {
-            this.sensor.update( roadBorders )
+            this.sensor.update( roadBorders, traffic )
         }
     }
 
@@ -139,7 +139,7 @@ class Car
         this.y -= Math.cos( this.angle ) * this.speed
     }
 
-    draw( ctx )
+    draw( ctx, color )
     {
         if( this.damaged )
         {
@@ -147,7 +147,7 @@ class Car
         }
         else
         {
-            ctx.fillStyle = 'black'
+            ctx.fillStyle = color
         }
 
         ctx.beginPath( )
