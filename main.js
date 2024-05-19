@@ -15,7 +15,7 @@ const car = new Car(
     100,
     30,
     50,
-    'KEYS' // 'AI'
+    'AI' // 'KEYS'
 ) 
 
 const traffic = [
@@ -31,7 +31,7 @@ const traffic = [
 
 animate( )
 
-function animate( )
+function animate( time )
 {
     for( let i = 0; i < traffic.length; i ++ )
     {
@@ -54,6 +54,7 @@ function animate( )
 
     carCtx.restore( )
 
+    networkCtx.lineDashOffset = - time * 0.01
     Visualizer.drawNetwork( networkCtx, car.brain )
 
     requestAnimationFrame( animate )

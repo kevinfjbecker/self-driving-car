@@ -35,7 +35,7 @@ function getRgba( value )
     const R = value < 0 ? 0 : 255
     const G = R
     const B = value > 0 ? 0 : 255
-    return `rgba( ${R}, ${G}, ${B}, ${alpha} )`
+    return `rgba( ${ R }, ${ G }, ${ B }, ${ alpha } )`
 }
 
 function polysIntersect( poly1, poly2 )
